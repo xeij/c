@@ -20,12 +20,12 @@ void sorter(char array[], int size) {
 
 int main() {
 
-    char array[] = { 'B','A','D','K' };
+    char array[] = {'N','B','W','H','S','P'};
 
     int size = sizeof(array) / sizeof(array[0]);
     printf("\n Original Array: ");
     for (int i = 0; i < size; i++) {
-        printf("%c", array[i]);
+        printf("%c ", array[i]);
     }
 
     sorter(array, size);
@@ -33,9 +33,8 @@ int main() {
 
     printf("\n Sorted   Array: ");
     for (int i = 0; i < size; i++) {
-        printf("%c", array[i]);
+        printf("%c ", array[i]);
     }
 
     return 0;
-
 }
