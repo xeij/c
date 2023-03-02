@@ -16,12 +16,11 @@ void insert_node(struct node **head_ref, int data) {
 }
 
 void delete_node(struct node **head_ref, int data) {
-    // Check if the list is empty
+   
     if (*head_ref == NULL) {
         return;
     }
 
-    // Find the node to be deleted
     struct node *current = *head_ref;
     struct node *previous = NULL;
     while (current != NULL && current->data != data) {
@@ -29,19 +28,16 @@ void delete_node(struct node **head_ref, int data) {
         current = current->next;
     }
 
-    // If the node to be deleted is not found, return
     if (current == NULL) {
         return;
     }
 
-    // If the node to be deleted is the first node
     if (previous == NULL) {
         *head_ref = current->next;
-    } else { // If the node to be deleted is not the first node
+    } else { 
         previous->next = current->next;
     }
 
-    // Free the memory allocated for the node to be deleted
     free(current);
 }
 // Print the contents of the list
