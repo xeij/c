@@ -40,7 +40,7 @@ void delete_node(struct node **head_ref, int data) {
 
     free(current);
 }
-// Print the contents of the list
+
 void print_list(struct node *head) {
     printf("List contents: ");
     while (head != NULL) {
@@ -51,19 +51,16 @@ void print_list(struct node *head) {
 }   
 
 int main() {
-    // Initialize the head of the list to NULL
+  
     struct node *head = NULL;
 
-    // Insert some nodes into the list
     insert_node(&head, 10);
     insert_node(&head, 20);
     insert_node(&head, 30);
 
-
-    // Print the contents of the list
     print_list(head);
 
-    // Free the memory allocated for the list
+
     while (head != NULL) {
         struct node *temp = head;
         head = head->next;
