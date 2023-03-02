@@ -1,13 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Define a node in the linked list
 struct node {
     int data;
     struct node *next;
 };
 
-// Insert a new node at the beginning of the list
+
 void insert_node(struct node **head_ref, int data) {
     struct node *new_node = (struct node *)malloc(sizeof(struct node));
     new_node->data = data;
