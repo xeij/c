@@ -6,7 +6,6 @@ struct node {
     struct node *next;
 };
 
-
 void insert_node(struct node **head_ref, int data) {
     struct node *new_node = (struct node *)malloc(sizeof(struct node));
     new_node->data = data;
@@ -14,6 +13,32 @@ void insert_node(struct node **head_ref, int data) {
     *head_ref = new_node;
 }
 
+void delete_node(struct node **head_ref, int position) {
+
+    struct node *current = *head_ref;
+    struct node *previous = *head_ref;
+
+    if (*head_ref == NULL){
+        return;
+    } else if (position == 1){
+        *head_ref= current->next;
+        free(current);
+        current = NULL;
+    }
+        else {
+
+            while(position != 1){
+                previous = current;
+                current = current->next;
+                position--;
+            }
+            previous->next = current->next;
+            free(current);
+            current = NULL;
+        }
+}
+
+/*
 void delete_node(struct node **head_ref, int data) {
    
     if (*head_ref == NULL) {
@@ -22,6 +47,7 @@ void delete_node(struct node **head_ref, int data) {
 
     struct node *current = *head_ref;
     struct node *previous = NULL;
+
     while (current != NULL && current->data != data) {
         previous = current;
         current = current->next;
@@ -36,9 +62,9 @@ void delete_node(struct node **head_ref, int data) {
     } else { 
         previous->next = current->next;
     }
-
     free(current);
 }
+*/
 
 void print_list(struct node *head) {
     printf("List contents: ");
@@ -56,6 +82,10 @@ int main() {
     insert_node(&head, 10);
     insert_node(&head, 20);
     insert_node(&head, 30);
+
+    print_list(head);
+
+    delete_node(&head, 1);
 
     print_list(head);
 
