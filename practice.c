@@ -14,9 +14,28 @@ void insert_node(struct node **head_ref, int data){
     *head_ref = new_node;
 }
 
-void delete_node(struct node **head_ref, int data){
+void delete_node(struct node **head_ref, int position){
 
+    struct node *previous = NULL;
+    struct node *current = NULL;
 
+    if (*head_ref = NULL){
+        return;
+    } else if (position == 1){
+        *head_ref = current->next;
+        free(current);
+        current = NULL;
+    } else {
+         while(position != NULL){
+            previous = current;
+            current = current->next;
+            position--;
+         }
+
+         previous->next = current->next;
+         free(current);
+         current = NULL;    
+    }
 }
 
 void print_list(struct node *head){
@@ -45,6 +64,8 @@ int main(){
     insert_node(&head, 20);
     insert_node(&head, 30);
     
+    print_list(head);
+    delete_node(&head,1);
     print_list(head);
     free_temp(head);
 

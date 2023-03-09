@@ -35,7 +35,7 @@ void delete_node(struct node **head_ref, int position) {
             previous->next = current->next;
             free(current);
             current = NULL;
-        }
+    }
 }
 
 /*
@@ -75,6 +75,15 @@ void print_list(struct node *head) {
     printf("\n");
 }   
 
+void free_temp(struct node *head){
+    
+    while(head != NULL){
+        struct node *temp = head;
+        head = head->next;
+        free(temp);
+        }       
+}
+
 int main() {
   
     struct node *head = NULL;
@@ -84,17 +93,9 @@ int main() {
     insert_node(&head, 30);
 
     print_list(head);
-
     delete_node(&head, 1);
-
     print_list(head);
-
-
-    while (head != NULL) {
-        struct node *temp = head;
-        head = head->next;
-        free(temp);
-    }
+    free_temp(head);
 
     return 0;
 }
