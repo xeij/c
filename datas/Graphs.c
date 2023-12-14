@@ -15,7 +15,7 @@ Graph* create_graph(int num_vertices) {
     Graph* graph = (Graph*) malloc(sizeof(Graph));
     graph->num_vertices = num_vertices;
     graph->num_edges = 0;
-    for (int i = 0; i < num_vertices; i++) {
+    for (int i = 0; i < num_vertices; i++) {   
         graph->vertices[i] = i;
         for (int j = 0; j < num_vertices; j++) {
             graph->edges[i][j] = 0;
