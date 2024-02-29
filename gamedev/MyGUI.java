@@ -1,3 +1,4 @@
+//Shaya Arya
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -13,7 +14,6 @@ public class MyGUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1280, 720);
 
-        // create a panel to draw on
         canvas = new JPanel() {
             public void paintComponent(Graphics g) {
                 super.paintComponent(g);
@@ -24,7 +24,6 @@ public class MyGUI {
         };
         canvas.setBackground(Color.WHITE);
         frame.add(canvas);
-
         // update mouse position every 10 milliseconds
         Timer mouseTimer = new Timer(1, new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -34,7 +33,6 @@ public class MyGUI {
         });
         mouseTimer.start();
 
-        // start drawing triangles every half second
         Timer drawingTimer = new Timer(25, new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 canvas.repaint();
@@ -42,7 +40,6 @@ public class MyGUI {
         });
         drawingTimer.start();
 
-        // show the window
         frame.setVisible(true);
     }
 
