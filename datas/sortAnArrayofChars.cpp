@@ -1,3 +1,5 @@
+//Shaya Arya
+
 #include <iostream>
 
 void sorter(char array[], int size) {
