@@ -18,10 +18,10 @@ int isSorted(int arr[], int size) {
     int i;
     for (i = 0; i < size - 1; i++) {
         if (arr[i] > arr[i + 1]) {
-            return 0;  // Array is not sorted
+            return 0;  
         }
     }
-    return 1;  // Array is sorted
+    return 1; 
 }
 
 void randomizeSort(int arr[], int size) {
