@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string.h>
 
-
 void sorter(char array[][100], int size){
 
 int i,j;

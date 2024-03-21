@@ -1,5 +1,3 @@
-//Shaya Arya
-
 #include <stdio.h>
 #include <stdlib.h>
 
