@@ -1,5 +1,6 @@
-// Fibonacci Series using Recursion 
-#include <bits/stdc++.h> 
+#include <stdio.h>
+#include <iostream>
+
 using namespace std; 
   
 int fib(int n) 
@@ -15,3 +16,5 @@ int main()
     cout << fib(n); 
     getchar(); 
     return 0; 
+
+}
