@@ -1,3 +1,5 @@
+#include <iostream>
+#include <vector>
 using namespace std;
 
 int combinations(std::vector<int> items){
@@ -10,6 +12,16 @@ for(auto i : items){
     return s;
 }
 
+bool profitableGamble(int prob, int prize, int pay){
+
+    if(prob * prize > pay){
+        return true;
+    }
+return false;
+}
+
 int main(){
+
+std::cout<< profitableGamble(10,200,50);
 
 }
