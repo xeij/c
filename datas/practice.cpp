@@ -20,6 +20,16 @@ bool profitableGamble(int prob, int prize, int pay){
     return false;
 }
 
+bool tradeWorthy(int price, int peRatio, int twoHun_DailyMovingAverage){
+
+    bool priceCondition = (price < twoHun_DailyMovingAverage );
+    bool peRatioCondition = (peRatio < 20 );
+    bool maCondition = (price < 0.95 * twoHun_DailyMovingAverage && price > 1.05 * twoHun_DailyMovingAverage );
+
+    return priceCondition && peRatioCondition && maCondition;
+    
+}
+
 int main(){
 
     std::cout<< profitableGamble(10,200,50);
