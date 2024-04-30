@@ -2,24 +2,6 @@
 #include <vector>
 using namespace std;
 
-int combinations(std::vector<int> items){
-
-int s=1;
-for(auto i : items){
-    if(items[i] != 0)
-    s *= items[i];
-    }
-    return s;
-}
-
-bool profitableGamble(int prob, int prize, int pay){
-
-    if(prob * prize > pay){
-        return true;
-    }
-    return false;
-}
-
 bool tradeWorthy(int price, int peRatio, int twoHun_DailyMovingAverage){
 
     bool priceCondition = (price < twoHun_DailyMovingAverage );
