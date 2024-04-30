@@ -27,11 +27,16 @@ bool tradeWorthy(int price, int peRatio, int twoHun_DailyMovingAverage){
     bool maCondition = (price < 0.95 * twoHun_DailyMovingAverage && price > 1.05 * twoHun_DailyMovingAverage );
 
     return priceCondition && peRatioCondition && maCondition;
-    
+
 }
 
 int main(){
+    if(tradeWorthy){
+        std::cout<<"Proceed with Trade";
 
+    } else {
+        std::cout<<"Negative";
+    }
     std::cout<< profitableGamble(10,200,50);
 
 }
