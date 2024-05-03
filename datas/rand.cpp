@@ -22,6 +22,6 @@ int main(){
     } else {
         std::cout<<"Negative";
     }
-    std::cout<< profitableGamble(10,200,50);
+    std::cout<< profitableGamble(22,234,49);
 
 }
