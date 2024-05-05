@@ -42,7 +42,7 @@ void heapify(Heap* heap, int index) {
 
 void insert(Heap* heap, int value) {
     if (heap->size == MAX_HEAP_SIZE) {
-        printf("Heap is full, cannot insert.\n");
+        printf("Heap is full");
         return;
     }
 
@@ -58,7 +58,7 @@ void insert(Heap* heap, int value) {
 
 void remove_max(Heap* heap) {
     if (heap->size == 0) {
-        printf("Heap is empty, cannot remove.\n");
+        printf("Heap is empty");
         return;
     }
 
