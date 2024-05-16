@@ -1,4 +1,3 @@
-/*Sorts a text file of words.*/
 
 #include <stdio.h>
 #include <stdlib.h>
