@@ -1,4 +1,3 @@
-// C++ code to implement the binary search approach
 #include <algorithm>
 #include <climits>
 #include <iostream>
